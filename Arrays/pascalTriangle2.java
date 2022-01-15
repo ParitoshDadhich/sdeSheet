@@ -27,6 +27,7 @@ class Solution {
         int prev = 1;
         ans.add(prev);
         for(int i=1; i<=rowIndex; i++){
+             // nCr = (nCr-1 * (n - r + 1))/r
             int curr = (prev * (rowIndex - i + 1))/i;
             ans.add(curr);
             prev = curr;
