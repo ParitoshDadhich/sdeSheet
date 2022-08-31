@@ -36,3 +36,22 @@ class Solution {
         return ans;
     }
 }
+
+
+// OR
+
+class Solution {
+    public List<Integer> getRow(int rowIndex) {
+        List<Integer> list = new ArrayList<>();
+        long res = 1;
+        list.add(1);
+        for(int i=0; i<rowIndex; i++){
+            res *= (rowIndex - i);
+            res /= (i + 1);
+            list.add((int)res);
+        }
+        
+        return list;
+    }
+}
+
